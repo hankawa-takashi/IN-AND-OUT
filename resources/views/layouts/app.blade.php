@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
+</head
+ 
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -39,10 +40,10 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        @guest
+                        @guesti class="nav-item">
+
                             @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <l                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
@@ -74,10 +75,19 @@
                 </div>
             </div>
         </nav>
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 6d90dc68bd7d56d7dc37343a5df2ffffb524d3b3
         <main class="py-4">
             @yield('content')
         </main>
     </div>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+ 
+</html>
+>>>>>>> 6d90dc68bd7d56d7dc37343a5df2ffffb524d3b3

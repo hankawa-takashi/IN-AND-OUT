@@ -15,7 +15,7 @@ class CreateFloorInfTable extends Migration
     {
         Schema::create('floor_inf', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id');
+            $table->integer('user_id')->unsigned()->index();
             $table->string('floor_name', 50);
             $table->timestamps();
         });

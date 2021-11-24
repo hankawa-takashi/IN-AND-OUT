@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head
- 
+
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -75,19 +75,9 @@
                 </div>
             </div>
         </nav>
-<<<<<<< HEAD
-
-=======
- 
->>>>>>> 6d90dc68bd7d56d7dc37343a5df2ffffb524d3b3
         <main class="py-4">
             @yield('content')
         </main>
     </div>
 </body>
-<<<<<<< HEAD
 </html>
-=======
- 
-</html>
->>>>>>> 6d90dc68bd7d56d7dc37343a5df2ffffb524d3b3

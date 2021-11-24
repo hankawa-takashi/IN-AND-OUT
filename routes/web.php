@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/IN_AND_OUT', [App\Http\Controllers\IN_AND_OUTController::class, 'index'])->name('IN_AND_OUT');

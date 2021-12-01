@@ -34,3 +34,7 @@ Route::post('/config/update', [ConfigController::class, 'exeUpdate'])->name('exe
 Route::post('/config/delete/{id}', [ConfigController::class, 'exeDelete'])->name('exeDelete');
 
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/IN_AND_OUT', [App\Http\Controllers\IN_AND_OUTController::class, 'index'])->name('IN_AND_OUT');

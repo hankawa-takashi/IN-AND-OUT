@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ConfigController;
 
 // フラグ設定画面を表示
-Route::get('/', [ConfigController::class, 'flagList'])->name('configs');
+Route::get('/config', [ConfigController::class, 'flagList'])->name('configs');
 
 // フラグ登録のページに遷移
 Route::get('/config/entry', [ConfigController::class, 'EntryPage'])->name('EntryPage');
@@ -33,6 +33,9 @@ Route::post('/config/update', [ConfigController::class, 'exeUpdate'])->name('exe
 // フラグの削除
 Route::post('/config/delete/{id}', [ConfigController::class, 'exeDelete'])->name('exeDelete');
 
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Auth::routes();
 

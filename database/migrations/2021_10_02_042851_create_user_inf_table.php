@@ -13,16 +13,17 @@ class CreateUserInfTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_inf', function (Blueprint $table) {
-            $table->integer('id', 11)->autoIncrement();
-            $table->string('company_name', 255);
-            $table->string('user_name', 255);
-            $table->string('mail', 255)->unique();
-            $table->string('password', 255);
-            $table->timestamps();
-            $table->tinyInteger('deleted');
-        });
-    }
+
+            Schema::create('user_inf', function (Blueprint $table) {
+                $table->integer('id', 11)->autoIncrement();
+                $table->string('company_name', 255);
+                $table->string('user_name', 255);
+                $table->string('mail', 255)->unique();
+                $table->string('password', 255);
+                $table->timestamps();
+                $table->tinyInteger('deleted');
+            });
+        }
 
     /**
      * Reverse the migrations.

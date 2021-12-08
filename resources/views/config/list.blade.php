@@ -24,9 +24,9 @@
                         <form action="{{ route('EditPage',['id' => $flag->id]) }}" method="GET">
                             <input type="submit" class="btn btn-outline-success btn1" value="編集">
                         </form>
-                        <form action="{{ route('exeDelete',['id' => $flag->id]) }}" method="post" onSubmit="return checkDelete()">
+                        <form action="{{ route('exeDelete',['id' => $flag->id]) }}" id="delete" method="post">
                             @csrf
-                            <input type="submit" class="btn btn-outline-danger btn1" value="削除">
+                            <input type="button" name="btn" class="btn btn-outline-danger btn1 btn-delete" value="削除">
                         </form>
                     </td>
                 </tr>
@@ -37,13 +37,26 @@
 <button class="btn btn-outline-dark">ホームに戻る</button>
 
 <script>
-function checkDelete(){
-    if(window.confirm('削除してよろしいですか？')){
-        return true;
-    }else{
-        return false;
-    }
-}
+$(document).ready(function(){
+$('.btn-delete').on('click',function(){
+
+    swal({
+        title: "削除してよろしいですか？",
+        text: "",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    })
+    .then((willDelete) =>{
+        if(willDelete){
+            $('#delete').submit();
+        }else{
+            swal("キャンセルしました！");
+        }
+    });
+
+})
+});
 </script>
 
 @endsection

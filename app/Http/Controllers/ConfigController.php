@@ -58,7 +58,7 @@ class ConfigController extends Controller
         Config::insert($data);
         \Session::flash('suc_msg', '追加しました。');
 
-        return redirect(route('exeEntry'));
+        return redirect(route('configs'));
     }
 
     /**
@@ -97,7 +97,7 @@ class ConfigController extends Controller
         $flag->save();
         \Session::flash('suc_msg', '保存しました。');
 
-        return view('config.edit', ['flag' => $flag]);
+        return redirect(route('configs'));
 
     }
 

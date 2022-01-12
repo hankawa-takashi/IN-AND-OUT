@@ -1,7 +1,7 @@
 @extends('layouts.app')
  
 @section('content')
- 
+<link href="{{asset('/css/app.css')}}" rel="stylesheet">
 <!-- タスク一覧表示 -->
 @if (count($floor_inf) > 0)
 
@@ -14,30 +14,31 @@
 </div>
 
 <div class="panel panel-default">
-    <div class="panel-heading">
-        Current Tasks
-    </div>
  
+
+<h1>IN_AND_OUT</h1>
     <div class="panel-body">
         <table class="table table-striped floor_inf-table">
  
             <!-- テーブルヘッダ -->
-            <thead>
+            <!-- <thead>
                 <th>IN_AND_OUT</th>
                 <th>&nbsp;</th>
-            </thead>
- 
+            </thead> -->
+
+
             <!-- テーブル本体 -->
             <tbody>
-                @foreach ($floor_inf as $f)
+               
                 <tr>
+                @foreach ($floor_inf as $f)
                     <!-- タスク名 -->
                     <td class="table-text">
-                        <div>{{ $f->floor_name }}</div>
+                        <input type="button" value="{{ $f->floor_name }}" style="background-color:#00ff00;width:200px;height:100px;">
                     </td>
- 
+                    @endforeach
                 </tr>
-                @endforeach
+                
             </tbody>
         </table>
     </div>

@@ -14,15 +14,14 @@ class CreateFlagInfTable extends Migration
      */
     public function up()
     {
-        Schema::create('flag_inf', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('floor_id')->unique();
-            $table->date('date')->unique();
-            $table->boolean('flag');
-            $table->timestamps();
-        });
-
-    }
+            Schema::create('flag_inf', function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->integer('floor_id')->unique();
+                $table->date('date')->unique();
+                $table->boolean('flag');
+                $table->timestamps();
+            });
+        }
 
     /**
      * Reverse the migrations.

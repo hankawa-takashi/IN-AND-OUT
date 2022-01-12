@@ -1,0 +1,31 @@
+.main{
+    margin: 10px;
+}
+
+.button{
+    display: flex;
+}
+
+.btn1{
+    margin-right: 10px;
+}
+
+.floor_name{
+    vertical-align: middle;
+}
+
+.w20{
+    width: 30%;
+}
+
+.entry{
+    display: flex;
+}
+
+.btn2{
+    margin-left: 10px;
+}
+
+.btn3{
+    margin-top: 10px;
+}

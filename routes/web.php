@@ -13,8 +13,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\ConfigController;
+
+// フラグ設定画面を表示
+Route::get('/config', [ConfigController::class, 'flagList'])->name('configs');
+
+// フラグ登録のページに遷移
+Route::get('/config/entry', [ConfigController::class, 'EntryPage'])->name('EntryPage');
+
+// フラグの登録
+Route::post('/config/entry', [ConfigController::class, 'exeEntry'])->name('exeEntry');
+
+// フラグ編集画面の表示
+Route::get('/config/edit/{id}', [ConfigController::class, 'EditPage'])->name('EditPage');
+
+// フラグの更新
+Route::post('/config/update', [ConfigController::class, 'exeUpdate'])->name('exeUpdate');
+
+// フラグの削除
+Route::post('/config/delete/{id}', [ConfigController::class, 'exeDelete'])->name('exeDelete');
+
 Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/IN_AND_OUT', [App\Http\Controllers\IN_AND_OUTController::class, 'index'])->name('IN_AND_OUT');

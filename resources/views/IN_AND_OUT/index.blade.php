@@ -6,11 +6,14 @@
 @if (count($floor_inf) > 0)
 
 <div class="outer">
-        <a href=""> <div class="iconGear"><div></div></div></a>
+        <a href="config"> <div class="iconGear"><div></div></div></a>
 </div>
 
 <div class=logout>
-    <a href ="">ログアウト</a>
+    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+        <button type="submit" class="btn btn-primary">ログアウト</button>
+    </form>
 </div>
 
 <div class="panel panel-default">

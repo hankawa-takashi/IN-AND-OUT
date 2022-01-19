@@ -34,7 +34,7 @@
         </tbody>
     </table>
 </div>
-<button class="btn btn-outline-dark">ホームに戻る</button>
+<a href="IN_AND_OUT"><button class="btn btn-outline-dark">ホームに戻る</button></a>
 
 <script>
 $(document).ready(function(){

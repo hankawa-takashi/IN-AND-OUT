@@ -22,4 +22,11 @@ class Config extends Model
         'user_id',
         'floor_name',
     ];
+
+    /**
+     *  
+     */
+    // public function flag_infs(){
+    //     return $this->hasMany(Flag_inf::class);
+    // }
 }

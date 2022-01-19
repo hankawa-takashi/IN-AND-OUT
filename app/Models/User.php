@@ -41,4 +41,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     *  
+     */
+    // public function floor_infs(){
+    //     return $this->hasMany(Floor_inf::class);
+    // }
 }
